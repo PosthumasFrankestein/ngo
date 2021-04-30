@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>User profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/user.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body style="background-color: black;">
+	<div>
+	<div class="logo">
+		<img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khveGqRZLmR7NwXs1M3EMoAJtliEkh...dt9vQz " style="width: 150px;height:60px;padding-left: 20px;">
+	</div>
+	<div class="cx">
+		<div class="head" id="head">
+			<ul>
+				<li><a href="#article">Why E-F-ALL?</a></li>
+				<div class="dropdown">
+					<li><a href="#our_work">Our work</a></li>
+					<div class="dropdown-content1">
+						<a href="#article">Lebanon</a>
+						<a href="#article">Africa</a>
+						<a href="#article">Covid-19</a>
+					</div>
+				</div>
+				<li><a href="#about">About Us</a></li>
+				<div class="dropdown">
+					<li><a href="#get_involved">Get involved</a></li>
+					<div class="dropdown-content">
+						<a href="#fund">Fundraise</a>
+						<a href="#bp">Brand Partnership</a>
+						<a href="#lg">Legacy giving</a>
+						<a href="#st">Student and teacher</a>
+					</div>
+				</div>
+			</ul>
+			<ul>
+				<li><a href="account.php"><i Class="fa fa-shopping-cart"></i>My-Account</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+<div class="row gutters">
+<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+<div class="card h-100">
+	<div class="card-body">
+		<div class="account-settings">
+			<div class="user-profile">
+				<div class="user-avatar">
+					<img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+				</div>
+				<h5 class="user-name">User 1</h5>
+				<h6 class="user-email">admin@gmail.com</h6>
+			</div>
+			<div class="about">
+				<h5>About</h5>
+				<p>I enjoy helping to promote education.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+<div class="card h-100">
+	<div class="card-body">
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h6 class="mb-2 text-primary">Personal Details</h6>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="fullName">Full Name</label>
+					<input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="eMail">Email</label>
+					<input type="email" class="form-control" id="eMail" placeholder="Enter email ID">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="website">Website URL</label>
+					<input type="url" class="form-control" id="website" placeholder="Website url">
+				</div>
+			</div>
+		</div>
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h6 class="mt-3 mb-2 text-primary">Address</h6>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="Street">Street</label>
+					<input type="name" class="form-control" id="Street" placeholder="Enter Street">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="ciTy">City</label>
+					<input type="name" class="form-control" id="ciTy" placeholder="Enter City">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="sTate">State</label>
+					<input type="text" class="form-control" id="sTate" placeholder="Enter State">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="zIp">Zip Code</label>
+					<input type="text" class="form-control" id="zIp" placeholder="Zip Code">
+				</div>
+			</div>
+		</div>
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="text-right">
+					<button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+					<button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>
