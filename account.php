@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <title>Login Page</title>
-   <link rel="stylesheet" type="text/css" href="style/login.css">
-</head>
-<body style="background-color:skyblue;">>
-	<center>
-	<div class="container">
-		<br>
-		<h3>Login Page</h3>
-		<div class="text">
-	<form action="" method="POST">
-		Email: <input type="email" name="email" required><br><br>
-		Password: <input type="password" name="password" minlength="8"required><br><br>
-        <input class="send" type="submit" name="Login" >
-	</form>
-</div>
-</div>
-    <?php
+<html>
+  <head>
+    <link rel="stylesheet" href="style/login.css">
+    <title>login</title>
+  </head>
+  <body>
+    <div class="main">
+      <p class="sign" align="center"> Sign in</p>
+      <form class="form1" action="" method="POST">
+        <input type="email" class="username" name="email" placeholder="email">
+        <input class="password" name="password" type="password" pattern="[a-zA-Z0-9]+" placeholder="password">
+        <input class="submit" type="submit" name="Login" >
+        <p class="Signup"> <a href="#"> Signup here</a></p>
+      </form>
+	<?php
 		session_start();
-			if(isset($_POST['submit'])){
+			if(isset($_POST['Login'])){
 				$connection = mysqli_connect("localhost","root","");
 				$db = mysqli_select_db($connection,"lonee_list");
 				$query = "select * from login where email = '$_POST[email]'";
@@ -45,10 +34,12 @@
                             header("Location:user_login.php");
 						}
 					}
-					echo "Wrong email or password";
-				}		
+					
+				}
+				echo '<p class="error"> Wrong email or password</p>';		
 			}
 		?>
-	</center>
-</body>
+    </div>
+    
+  </body>
 </html>
