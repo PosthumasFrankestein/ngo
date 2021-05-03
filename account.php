@@ -7,8 +7,8 @@
     <div class="main">
       <p class="sign" align="center"> Sign in</p>
       <form class="form1" action="" method="POST">
-        <input type="email" class="username" name="email" placeholder="email">
-        <input class="password" name="password" type="password" pattern="[a-zA-Z0-9]+" placeholder="password">
+        <input type="email" class="username" name="email" maxlength="50" placeholder="email" required>
+        <input class="password" name="password" type="password" minlength="6" maxlength="50" placeholder="password" required>
         <input class="login" type="submit" name="Login" >
         <p class="Signup"> <a href="signup.html"> Signup here</a></p>
       </form>
@@ -22,16 +22,18 @@
 				while ($row = mysqli_fetch_assoc($query_run)) {
 					if($row['email'] == $_POST['email'] && $row['perm']==1){
 						if($row['password'] == $_POST['password']){
-							$_SESSION['email']=$row['email'];
+							$_SESSION['email']=$_POST['email'];
 							$_SESSION['name']=$row['name'];
+							
                             header("Location: admin_login.html");
 						}
 					}
 					elseif($row['email'] == $_POST['email'] && $row['perm']==2){
 						if($row['password'] == $_POST['password']){
-							$_SESSION['email']=$row['email'];
+							
+							$_SESSION['email']=$_POST['email'];
 							$_SESSION['name']=$row['name'];
-                            header("Location:user_login.php");
+							header("Location:user_login.php");
 						}
 					}
 					
@@ -40,6 +42,5 @@
 			}
 		?>
     </div>
-    
   </body>
 </html>

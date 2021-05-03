@@ -15,9 +15,11 @@ if ($_POST['password']==$_POST['password1']){
     $password=mysqli_real_escape_string($link,$_POST['password']);
     $password1=mysqli_real_escape_string($link,$_POST['password1']);
     $sql = "INSERT INTO  register (name,phone,email,password,street,city,state,zipcode) VALUES('$name','$phone','$email','$password','$street','$city','$state','$zipcode')";
-    if(mysqli_query($link,$sql)){
+    $sql1 = "INSERT INTO  login (name,email,password,perm) VALUES('$name','$email','$password',2)";
+    if(mysqli_query($link,$sql) && mysqli_query($link,$sql1)){
         session_start();
         echo"Records added successfully";
+        $_SESSION['email'] = $email;
         header("Location:user_login.php");
     }else{
         echo"Error : Could not execute $sql." . 
