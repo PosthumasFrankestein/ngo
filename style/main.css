@@ -132,8 +132,8 @@ html{
     border-color: #e9eae4;
     color: black;
     border:none;
-    
-}
+    font-size:medium;
+    }
 .content2 button:hover{
     cursor: pointer;
     opacity: 0.5;

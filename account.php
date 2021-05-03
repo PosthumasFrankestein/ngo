@@ -9,8 +9,8 @@
       <form class="form1" action="" method="POST">
         <input type="email" class="username" name="email" placeholder="email">
         <input class="password" name="password" type="password" pattern="[a-zA-Z0-9]+" placeholder="password">
-        <input class="submit" type="submit" name="Login" >
-        <p class="Signup"> <a href="#"> Signup here</a></p>
+        <input class="login" type="submit" name="Login" >
+        <p class="Signup"> <a href="signup.html"> Signup here</a></p>
       </form>
 	<?php
 		session_start();
