@@ -58,23 +58,7 @@
     border: 0;
     margin-bottom: 1rem;
 }
-/* .selection{
-    padding: 50px;
-}
-.selection form table tr td{
-    font-size: large;
-    padding: 20px;
-}
-
-.selection form table tr td input{
-    background-color: white;
-    font-size: large;
-    border-width:0px;
-    border:none;
-}
-.selection form table tr td input:hover, input:focus, input.visited {
-    color:red;
-}  */
+ 
 .login-wrap{
     height:fit-content;
     width: fit-content;
@@ -118,4 +102,24 @@
 	position:relative;
 	perspective:1000px;
 	transform-style:preserve-3d;
+}
+/* Style the active class, and buttons on mouse-over */
+.selection{
+    padding: 50px;
+}
+.selection table tr td{
+    font-size: large;
+    padding: 20px;
+}
+
+.selection table tr td input{
+    font-size: large;
+    border-width:0px;
+    border:none;
+}
+
+.active , .selection table tr td input:hover{
+    background-color: black;
+    text-decoration: underline;
+    color:white;
 }

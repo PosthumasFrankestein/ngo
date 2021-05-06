@@ -33,6 +33,7 @@
 							
 							$_SESSION['email']=$_POST['email'];
 							$_SESSION['name']=$row['name'];
+							// header("Location:user_login.php");
 							header("Location:user_login.php");
 						}
 					}

@@ -175,59 +175,7 @@ button:hover {
     background-color: powderblue;
 }
 
-.search{
-    width: 100%;
-    float: left;
-    height: 55px;
-    display:flex;
-    justify-content:left;
-}
-.search input{
-    width:70%;
-    height:40px;
-    padding:10px;
-    color:#757575;
-    border-radius: 20px;
-    border: 2px solid black;
-    outline: none;
-}
-.search a{
-    width:100px;
-    height:40px;
-    padding:10px;
-    border:1px solid #e5e5e5;
-    position:relative;
-    text-decoration: none;
-    color:#f5f5f5;
-    background: #01c0df;
-}
-.nav{
-    width:96%;
-    height:50px;
-    margin-top: 30px;
-    margin-left: 20px;
-    background: #f1f3f3;
-}
-.nav ul li{
-    list-style:none;
-    float:left;
-    padding:10px;
-    margin:0px 20px;
-}
-.nav ul li a{
-    margin-right: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    margin-left: 18px;    
-}
-.nav ul li a:hover{
-    color: black;
-}
-.mav ul li a:active{
-    color: green;
 
-}
 .Banner{
     margin-left: 30px;
     margin-top: 10px;

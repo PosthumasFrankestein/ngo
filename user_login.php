@@ -12,7 +12,11 @@ if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You have to log in first";
     header('location: account.php');
 }
-
+$email = $_SESSION['email'];
+$link = mysqli_connect("localhost", "root", "", "lonee_list");
+$query = "select * from register where email = '$email'";
+$query_run = mysqli_query($link, $query);
+$row = mysqli_fetch_assoc($query_run);
 // Logout button will destroy the session, and
 // will unset the session variables
 // User will be headed to 'login.php'
@@ -63,46 +67,23 @@ if (isset($_GET['logout'])) {
                     <p style="padding-top:20px ;font-size: 20px;">The education crisis is massive. But together, we can
                         solve it. Join The Spring, our community of monthly
                         givers, to bring clean and safe water to families around the world every single month.</p>
-
                 </div>
             </center>
         </div>
     </div>
-    <div class="selection">
-        <form method="post">
-            <table>
-                <tr>
-                    <td>
-                        <input type="submit" name="dashboard" value="Account Dashboard" onchange="this.className=(this.value=='')?'':'visited';">
-                    </td>
-                    <td>
-                        <input type="submit" name="edit_profile" value="Edit Profile" onchange="this.className=(this.value=='')?'':'visited';">
-                    </td>
-                </tr>
-            </table>
-        </form>
+    <div id="myDIV3" class="selection">
+        <table>
+            <tr>
+                <td>
+                    <input type="submit" class="btn active" value="Account Dashboard" onclick="myFunction()">
+                </td>
+                <td>
+                    <input type="submit" class="btn" value="Edit profile" onclick="myFunction()">
+                </td>
+            </tr>
+        </table>
     </div>
-    <!-- <div class="login-wrap">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-            <div class="login-form">
-                <div class="sign-in-htm">
-                    
-                </div>
-                <div class="sign-up-htm">
-                    </div>
-            </div>
-        </div>
-    </div> -->
-    <?php
-    if (isset($_POST['edit_profile'])) {
-        $email = $_SESSION['email'];
-        $link = mysqli_connect("localhost", "root", "", "lonee_list");
-        $query = "select * from register where email = '$email'";
-        $query_run = mysqli_query($link, $query);
-        $row = mysqli_fetch_assoc($query_run);
-    ?>
+    <div id="dash">
         <div class="container">
             <div class="row gutters">
                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -135,28 +116,28 @@ if (isset($_GET['logout'])) {
                                     <div class="form-group">
                                         <label for="fullName">Full Name</label>
                                         <input type="text" class="form-control" id="fullName" value="<?php echo
-                                                                                                        $row['name'] ?>">
+                                                                                                        $row['name'] ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="eMail">Email</label>
                                         <input type="email" class="form-control" id="eMail" value="<?php echo
-                                                                                                        $row['email'] ?>">
+                                                                                                    $row['email'] ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="phone">Phone</label>
                                         <input type="text" class="form-control" id="phone" value="<?php echo
-                                                                                                        $row['phone'] ?>"">
+                                                                                                    $row['phone'] ?>" disabled>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="website">Website URL</label>
                                         <input type="url" class="form-control" id="website" value="<?php echo
-                                                                                                        $row['url'] ?>">
+                                                                                                    $row['url'] ?>" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -167,40 +148,29 @@ if (isset($_GET['logout'])) {
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="Street">Street</label>
-                                        <input type="name" class="form-control" id="Street" value="<?php echo
-                                                                                                        $row['street'] ?>">
+                                        <input type="text" class="form-control" id="Street" value="<?php echo
+                                                                                                    $row['street'] ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="ciTy">City</label>
-                                        <input type="name" class="form-control" id="ciTy" value="<?php echo
-                                                                                                        $row['city'] ?>">
+                                        <input type="text" class="form-control" id="ciTy" value="<?php echo
+                                                                                                    $row['city'] ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="sTate">State</label>
                                         <input type="text" class="form-control" id="sTate" value="<?php echo
-                                                                                                        $row['state'] ?>">
+                                                                                                    $row['state'] ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="zIp">Zip Code</label>
                                         <input type="text" class="form-control" id="zIp" value="<?php echo
-                                                                                                        $row['zipcode'] ?>">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row gutters">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="text-right">
-                                        <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
-                                        <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
-                                        <a href="user_login.php?logout='1'" style="color: red;">
-                                            Click here to Logout
-                                        </a>
+                                                                                                $row['zipcode'] ?>" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -214,9 +184,121 @@ if (isset($_GET['logout'])) {
         <script type="text/javascript">
 
         </script>
-    <?php
-    }
-    ?>
+    </div>
+    <div id="edit" style="display:none">
+        <form method="post" action="script/update.php">
+            <div class="container">
+                <div class="row gutters">
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="account-settings">
+                                    <div class="user-profile">
+                                        <div class="user-avatar">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                                        </div>
+                                        <h5 class="user-name">User 1</h5>
+                                        <h6 class="user-email">admin@gmail.com</h6>
+                                    </div>
+                                    <div class="about">
+                                        <h5>About</h5>
+                                        <p>I enjoy helping to promote education.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row gutters">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h6 class="mb-2 text-primary">Personal Details</h6>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label for="name">Full Name</label>
+                                            <input type="text" class="form-control" name="name" value="<?php echo
+                                                                                                            $row['name'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" name="email" value="<?php echo
+                                                                                                        $row['email'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" class="form-control" name="phone" value="<?php echo
+                                                                                                        $row['phone'] ?>"">
+                                    </div>
+                                </div>
+                                <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="website">Website URL</label>
+                                                <input type="url" class="form-control" name="url" value="<?php echo
+                                                                                                            $row['url'] ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <h6 class="mt-3 mb-2 text-primary">Address</h6>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="street">Street</label>
+                                                <input type="text" class="form-control" name="street" value="<?php echo
+                                                                                                            $row['street'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="city">City</label>
+                                                <input type="text" class="form-control" name="city" value="<?php echo
+                                                                                                            $row['city'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="state">State</label>
+                                                <input type="text" class="form-control" name="state" value="<?php echo
+                                                                                                            $row['state'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="zipcode">Zip Code</label>
+                                                <input type="text" class="form-control" name="zipcode" value="<?php echo
+                                                                                                        $row['zipcode'] ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <div class="text-right">
+                                                <button type="submit" id="submit" class="btn btn-primary">Update</button>
+                                                <!-- <a href="user_login.php?logout='1'" style="color: red;">
+                                                    Click here to Logout
+                                                </a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+        </script>
+    </div>
     <footer>
         <div>
             <P>SUBSCRIPTION</P>
@@ -278,6 +360,31 @@ if (isset($_GET['logout'])) {
     <p class="paragraph"><span>© 2018 NGO Federation of Nepal.</span></p>
     <br>
     <br>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("dash");
+            var y = document.getElementById("edit");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV3");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 </body>
 
 </html>

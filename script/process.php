@@ -14,9 +14,10 @@ if ($_POST['password']==$_POST['password1']){
     $email=mysqli_real_escape_string($link,$_POST['email']);
     $password=mysqli_real_escape_string($link,$_POST['password']);
     $password1=mysqli_real_escape_string($link,$_POST['password1']);
-    $sql = "INSERT INTO  register (name,phone,email,password,street,city,state,zipcode) VALUES('$name','$phone','$email','$password','$street','$city','$state','$zipcode')";
-    $sql1 = "INSERT INTO  login (name,email,password,perm) VALUES('$name','$email','$password',2)";
-    if(mysqli_query($link,$sql) && mysqli_query($link,$sql1)){
+    $sql1 = mysqli_query($link,"INSERT INTO  login (name,email,password,perm) VALUES('$name','$email','$password',2)");
+    $uid=mysqli_insert_id($link);
+    $sql = mysqli_query($link,"INSERT INTO  register (uid,name,phone,email,password,street,city,state,zipcode) VALUES('$uid','$name','$phone','$email','$password','$street','$city','$state','$zipcode')");
+    if(($sql1==true) && ($sql==true)){
         session_start();
         echo"Records added successfully";
         $_SESSION['email'] = $email;
@@ -24,11 +25,11 @@ if ($_POST['password']==$_POST['password1']){
     }else{
         echo"Error : Could not execute $sql." . 
         mysqli_error($link);
-        header("Location:signup.html");
+        header("Location:../signup.html");
     }
 }else{
     echo"password do not match";
-    header("Location:signup.html");
+    header("Location:../signup.html");
 }
 
 ?>
