@@ -23,13 +23,14 @@ if ($_POST['password']==$_POST['password1']){
         $_SESSION['email'] = $email;
         header("Location:user_login.php");
     }else{
-        echo"Error : Could not execute $sql." . 
-        mysqli_error($link);
-        header("Location:../signup.html");
+        session_start();
+        $_SESSION['msg'] = "1";
+        header("Location:../signup.php");
     }
 }else{
-    echo"password do not match";
-    header("Location:../signup.html");
+    session_start();
+    $_SESSION['msg'] = "2";
+    header("Location:../signup.php");
 }
 
 ?>

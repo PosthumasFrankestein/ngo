@@ -10,7 +10,7 @@
         <input type="email" class="username" name="email" maxlength="50" placeholder="email" required>
         <input class="password" name="password" type="password" minlength="6" maxlength="50" placeholder="password" required>
         <input class="login" type="submit" name="Login" value="login" >
-        <p class="Signup"> <a href="signup.html"> Signup here</a></p>
+        <p class="Signup"> <a href="signup.php"> Signup here</a></p>
       </form>
 	<?php
 		session_start();

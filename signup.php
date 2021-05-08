@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION['msg'])) {
+    $_SESSION['msg'] = "Ready to signup";
+}
+if (isset($_GET['login'])) {
+    unset($_SESSION['msg']);
+    header("location:account.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,9 +76,21 @@
                         <div class="form-group">
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up" />
                         </div>
+                        <?php
+                        if ($_SESSION['msg']=='1' ){
+                            echo '<p style="color:red;font-size:large">
+                            Signup failed
+                            </p>';
+                        }
+                        elseif ($_SESSION['msg']=='2' ){
+                            echo '<p style="color:red;font-size:large">
+                            Password dont match
+                            </p>';
+                        }
+                        ?>
                     </form>
                     <p class="loginhere">
-                        Have already an account ? <a href="account.php" class="loginhere-link">Login here</a>
+                        Have already an account ? <a href="add_admin.php?cancel=1;return false;" class="loginhere-link">Login here</a>
                     </p>
                 </div>
             </div>

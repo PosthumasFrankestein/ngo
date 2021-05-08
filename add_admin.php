@@ -2,9 +2,15 @@
 session_start();
 if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You have to log in first";
-    header('location: ../account.php');
+    header('location:account.php');
 }
-
+if (!isset($_SESSION['msg'])) {
+    $_SESSION['msg'] = "Ready to add";
+}
+if (isset($_GET['cancel'])) {
+    unset($_SESSION['msg']);
+    header("location:admin_login.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +75,7 @@ if (!isset($_SESSION['email'])) {
                         ?>
                     </form>
                     <p class="loginhere">
-                        Are you done? <a href="admin_login.php" class="loginhere-link">Return Back</a>
+                        Are you done? <a href="add_admin.php?cancel=1;return false;" class="loginhere-link">Return Back</a>
                     </p>
                 </div>
             </div>

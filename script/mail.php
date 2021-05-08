@@ -22,7 +22,6 @@ while($row = mysqli_fetch_array($no)) {
 </head>
 
 <body>
-    
         <div class="container">
             <br><br>
             <form action="" method="post">
