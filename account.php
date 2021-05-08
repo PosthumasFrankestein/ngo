@@ -9,7 +9,7 @@
       <form class="form1" action="" method="POST">
         <input type="email" class="username" name="email" maxlength="50" placeholder="email" required>
         <input class="password" name="password" type="password" minlength="6" maxlength="50" placeholder="password" required>
-        <input class="login" type="submit" name="Login" >
+        <input class="login" type="submit" name="Login" value="login" >
         <p class="Signup"> <a href="signup.html"> Signup here</a></p>
       </form>
 	<?php
@@ -25,7 +25,7 @@
 							$_SESSION['email']=$_POST['email'];
 							$_SESSION['name']=$row['name'];
 							
-                            header("Location: admin_login.html");
+                            header("Location: admin_login.php");
 						}
 					}
 					elseif($row['email'] == $_POST['email'] && $row['perm']==2){

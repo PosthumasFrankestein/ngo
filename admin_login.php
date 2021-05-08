@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    $_SESSION['msg'] = "You have to log in first";
+    header('location: account.php');
+}
+$link = mysqli_connect("localhost", "root", "", "lonee_list");
+$no=mysqli_query($link,"SELECT COUNT(uid) FROM register");
+$row = $no->fetch_row();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +18,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style/user.css">
+  <link rel="stylesheet" type="text/css" href="style/admin.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse visible-xs">
@@ -40,6 +51,9 @@
         <li><a href="#section2">Age</a></li>
         <li><a href="#section3">Gender</a></li>
         <li><a href="#section3">Geo</a></li>
+        <button class="btn">Add new admin</button>
+        <button  href="script/mail.php" class="btn">Send email</button>
+        <button class="btn1">logout</button>
       </ul><br>
     </div>
     <br>
@@ -52,7 +66,9 @@
         <div class="col-sm-3">
           <div class="well">
             <h4>Users</h4>
-            <p>2</p> 
+            <p><?php
+              echo $row[0];
+            ?></p> 
           </div>
         </div>
         <div class="col-sm-3">

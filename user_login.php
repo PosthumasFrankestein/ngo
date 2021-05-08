@@ -1,13 +1,7 @@
 <?php
 
-// Starting the session, to use and
-// store data in session variable
 session_start();
 
-// If the session variable is empty, this 
-// means the user is yet to login
-// User will be sent to 'login.php' page
-// to allow the user to login
 if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You have to log in first";
     header('location: account.php');
@@ -17,10 +11,7 @@ $link = mysqli_connect("localhost", "root", "", "lonee_list");
 $query = "select * from register where email = '$email'";
 $query_run = mysqli_query($link, $query);
 $row = mysqli_fetch_assoc($query_run);
-// Logout button will destroy the session, and
-// will unset the session variables
-// User will be headed to 'login.php'
-// after loggin out
+
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['email']);
@@ -55,7 +46,7 @@ if (isset($_GET['logout'])) {
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#get_involved">Get involved</a></li>
                         <li><a href="#"><i Class="fa fa-phone"></i> Call-Us: +9779809867532</a></li>
-                        <li><a href="account.php"><i Class="fa fa-shopping-cart"></i>My-Account</a></li>
+                        <li><a href="user_login.php?logout='1'"><i Class="fa fa-shopping-cart"></i>Log-out</a></li>
                     </ul>
                 </div>
             </div>
@@ -75,10 +66,10 @@ if (isset($_GET['logout'])) {
         <table>
             <tr>
                 <td>
-                    <input type="submit" class="btn active" value="Account Dashboard" onclick="myFunction()">
+                    <input type="submit" class="btn active" value="Account Dashboard">
                 </td>
                 <td>
-                    <input type="submit" class="btn" value="Edit profile" onclick="myFunction()">
+                    <input type="submit" class="btn" value="Edit profile">
                 </td>
             </tr>
         </table>
@@ -179,11 +170,6 @@ if (isset($_GET['logout'])) {
                 </div>
             </div>
         </div>
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-
-        </script>
     </div>
     <div id="edit" style="display:none">
         <form method="post" action="script/update.php">
@@ -281,9 +267,6 @@ if (isset($_GET['logout'])) {
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div class="text-right">
                                                 <button type="submit" id="submit" class="btn btn-primary">Update</button>
-                                                <!-- <a href="user_login.php?logout='1'" style="color: red;">
-                                                    Click here to Logout
-                                                </a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -293,16 +276,11 @@ if (isset($_GET['logout'])) {
                     </div>
                 </div>
         </form>
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-
-        </script>
-    </div>
+        </div>
     <footer>
         <div>
             <P>SUBSCRIPTION</P>
-            <form action="mail.php" method="post">
+            <form action="script/subscribe.php" method="post">
                 <table>
                     <tr>
                         <td style="width:70%">

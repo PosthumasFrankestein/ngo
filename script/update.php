@@ -7,7 +7,7 @@ $uid=$row['uid'];
 if($link == false){
     die("Error : could not connect." .mysqli_connect_error());
 }
-$sql1 = "update register set name='$_POST[name]',phone='$_POST[phone]',city='$_POST[city]',street='$_POST[street]',state='$_POST[state]',zipcode='$_POST[zipcode]' where uid='$uid'";
+$sql1 = "update register set email='$_POST[email]',name='$_POST[name]',phone='$_POST[phone]',city='$_POST[city]',street='$_POST[street]',state='$_POST[state]',zipcode='$_POST[zipcode]',url='$_POST[url]' where uid='$uid'";
 if(mysqli_query($link,$sql1)==true){
     echo"Records added successfully";
     header("Location:../user_login.php");

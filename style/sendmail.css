@@ -1,0 +1,58 @@
+body {
+  background-color: #f3ebf6;
+  font-family: "ubuntu", sans-serif;
+}
+.container {
+  background-color: #ffffff;
+  width: fit-content;
+  height: 400px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  padding: 10px;
+  box-shadow: 0px 11px 35px 2px rgba(red, green, blue, alpha);
+}
+.subject {
+  margin-bottom: 20px;
+  border: 2px solid rgba(red, green, blue, alpha);
+  height: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+textarea {
+  border: 2px solid rgba(red, green, blue, alpha);
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+.btn {
+float: right;
+height: 30px;
+  width: 60px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  cursor: pointer;
+}
+.btn1 {
+    float: right;
+    height: 30px;
+      width: 60px;
+      color: #fff;
+      background-color: red;
+      border-color: red;
+    }
+    .btn1:hover {
+      color: #fff;
+      background-color: #e64a35;
+      border-color: #e64a35;
+      cursor: pointer;
+    }

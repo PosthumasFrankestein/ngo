@@ -1,9 +1,40 @@
+.row.content {
+  height: 550px;
+}
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .row.content {
+    height: auto;
+  }
+}
 
-   .row.content {height: 550px}
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    @media screen and (max-width: 767px) {
-      .row.content {height: auto;} 
-    }
+.btn {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+.btn.focus,
+.btn:focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+.btn1 {
+  color: #fff;
+  background-color: #f71707;
+  border-color: #f71707;
+}
+.btn1:hover {
+  color: #fff;
+  background-color: #f5473b;
+  border-color: #f5473b;
+}
