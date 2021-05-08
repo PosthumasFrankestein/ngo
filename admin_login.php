@@ -7,6 +7,11 @@ if (!isset($_SESSION['email'])) {
 $link = mysqli_connect("localhost", "root", "", "lonee_list");
 $no=mysqli_query($link,"SELECT COUNT(uid) FROM register");
 $row = $no->fetch_row();
+if (isset($_GET['logout'])) {
+  session_destroy();
+  unset($_SESSION['email']);
+  header("location: account.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -51,9 +56,9 @@ $row = $no->fetch_row();
         <li><a href="#section2">Age</a></li>
         <li><a href="#section3">Gender</a></li>
         <li><a href="#section3">Geo</a></li>
-        <button class="btn">Add new admin</button>
-        <button  href="script/mail.php" class="btn">Send email</button>
-        <button class="btn1">logout</button>
+        <button class="btn" onclick="window.location='add_admin.php'">Add new admin</button>
+        <button class="btn" onclick="window.location='script/mail.php'">Send email</button>
+        <button class="btn1" onclick="window.location='admin_login.php?logout=1';return false;">logout</button>
       </ul><br>
     </div>
     <br>

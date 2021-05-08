@@ -1,7 +1,8 @@
 <?php
+session_start();
 if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You have to log in first";
-    header('location: account.php');
+    header('location: ../account.php');
 }
 $link = mysqli_connect("localhost", "root", "", "lonee_list");
 $no=mysqli_query($link,"SELECT * FROM subscribe");

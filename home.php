@@ -167,7 +167,7 @@
     <footer>
         <div>
             <P>SUBSCRIPTION</P>
-            <form action="mail.php" method="post">
+            <form action="script/subscribe.php" method="post">
                 <table>
                     <tr>
                         <td style="width:70%">

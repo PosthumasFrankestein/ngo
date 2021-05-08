@@ -66,10 +66,10 @@ if (isset($_GET['logout'])) {
         <table>
             <tr>
                 <td>
-                    <input type="submit" class="btn active" value="Account Dashboard">
+                    <input type="submit" class="btn active" value="Account Dashboard" onclick="myFunction()">
                 </td>
                 <td>
-                    <input type="submit" class="btn" value="Edit profile">
+                    <input type="submit" class="btn" value="Edit profile" onclick="myFunction()">
                 </td>
             </tr>
         </table>
