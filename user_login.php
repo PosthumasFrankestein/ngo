@@ -6,6 +6,9 @@ if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You have to log in first";
     header('location: account.php');
 }
+if (!isset($_SESSION['msg'])) {
+    $_SESSION['msg'] = "OK";
+}
 $email = $_SESSION['email'];
 $link = mysqli_connect("localhost", "root", "", "lonee_list");
 $query = "select * from register where email = '$email'";
@@ -15,6 +18,7 @@ $row = mysqli_fetch_assoc($query_run);
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['email']);
+    // unset($_SESSION['msg']);
     header("location: account.php");
 }
 ?>
@@ -205,14 +209,14 @@ if (isset($_GET['logout'])) {
                                         <div class="form-group">
                                             <label for="name">Full Name</label>
                                             <input type="text" class="form-control" name="name" value="<?php echo
-                                                                                                            $row['name'] ?>">
+                                                                                                        $row['name'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group">
                                             <label for="email">Email</label>
                                             <input type="email" class="form-control" name="email" value="<?php echo
-                                                                                                        $row['email'] ?>">
+                                                                                                            $row['email'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -238,7 +242,7 @@ if (isset($_GET['logout'])) {
                                             <div class="form-group">
                                                 <label for="street">Street</label>
                                                 <input type="text" class="form-control" name="street" value="<?php echo
-                                                                                                            $row['street'] ?>">
+                                                                                                                $row['street'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -259,13 +263,24 @@ if (isset($_GET['logout'])) {
                                             <div class="form-group">
                                                 <label for="zipcode">Zip Code</label>
                                                 <input type="text" class="form-control" name="zipcode" value="<?php echo
-                                                                                                        $row['zipcode'] ?>">
+                                                                                                                $row['zipcode'] ?>">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row gutters">
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div class="text-right">
+                                                <?php
+                                                if ($_SESSION['msg'] == '1') {
+                                                    echo '<p style="color:green;font-size:large">
+                            Update sucessfull
+                            </p>';
+                                                } elseif ($_SESSION['msg'] == '2') {
+                                                    echo '<p style="color:red;font-size:large">
+                            Update failed
+                            </p>';
+                                                }
+                                                ?>
                                                 <button type="submit" id="submit" class="btn btn-primary">Update</button>
                                             </div>
                                         </div>
@@ -276,7 +291,7 @@ if (isset($_GET['logout'])) {
                     </div>
                 </div>
         </form>
-        </div>
+    </div>
     <footer>
         <div>
             <P>SUBSCRIPTION</P>
@@ -311,7 +326,7 @@ if (isset($_GET['logout'])) {
         <div>
             <p>Connect</p>
             <ul>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="mailto:e.f.all.ngo@gmail.com">Contact us</a></li>
                 <li><a href="#">Help center</a></li>
                 <li><a href="#">Request a speaker</a></li>
                 <li><a href="#">Shop our store</a></li>
@@ -329,9 +344,9 @@ if (isset($_GET['logout'])) {
         <div>
             <p>Contact</p>
             <ul>
-                <li><a href="#">9787-address city state</a></li>
+                <li><a href="#">Maiti devi</a></li>
                 <li><a href="#">+9779809867532 </a></li>
-                <li><a href="#">contact@gmail.com</a></li>
+                <li><a href="mailto:e.f.all.ngo@gmail.com">Contact Us</a></li>
             </ul>
         </div>
     </footer>

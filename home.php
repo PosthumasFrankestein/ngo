@@ -198,7 +198,7 @@
         <div>
             <p>Connect</p>
             <ul>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="mailto:e.f.all.ngo@gmail.com">Contact us</a></li>
                 <li><a href="#">Help center</a></li>
                 <li><a href="#">Request a speaker</a></li>
                 <li><a href="#">Shop our store</a></li>
@@ -216,9 +216,9 @@
         <div>
             <p>Contact</p>
             <ul>
-                <li><a href="#">9787-address city state</a></li>
+                <li><a href="#">Maiti devi</a></li>
                 <li><a href="#">+9779809867532 </a></li>
-                <li><a href="#">contact@gmail.com</a></li>
+                <li><a href="mailto:e.f.all.ngo@gmail.com">contact US</a></li>
             </ul>
         </div>
     </footer>
