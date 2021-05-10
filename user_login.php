@@ -2,23 +2,23 @@
 
 session_start();
 
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['uid'])) {
     $_SESSION['msg'] = "You have to log in first";
     header('location: account.php');
 }
 if (!isset($_SESSION['msg'])) {
     $_SESSION['msg'] = "OK";
 }
-$email = $_SESSION['email'];
+$uid = $_SESSION['uid'];
 $link = mysqli_connect("localhost", "root", "", "lonee_list");
-$query = "select * from register where email = '$email'";
+$query = "select * from register where uid = '$uid'";
 $query_run = mysqli_query($link, $query);
 $row = mysqli_fetch_assoc($query_run);
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['email']);
-    // unset($_SESSION['msg']);
+    unset($_SESSION['uid']);
+    unset($_SESSION['msg']);
     header("location: account.php");
 }
 ?>

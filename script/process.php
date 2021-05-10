@@ -21,7 +21,8 @@ if ($_POST['password']==$_POST['password1']){
         session_start();
         echo"Records added successfully";
         $_SESSION['email'] = $email;
-        header("Location:user_login.php");
+        $_SESSION['uid'] = $uid;
+        header("Location:,,/user_login.php");
     }else{
         session_start();
         $_SESSION['msg'] = "1";

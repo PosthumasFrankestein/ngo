@@ -39,9 +39,12 @@ if (isset($_GET['logout'])) {
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">Age</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
+        <li><a href="review.php">Donation under review</a></li>
+        <li><a href="accepted.php">Donation Accepted</a></li>
+        <li><a href="rejected.php">Donation rejected</a></li>
+        <button class="btn" onclick="window.location='add_admin.php'">Add new admin</button>
+        <button class="btn" onclick="window.location='script/mail.php'">Send email</button>
+        <button class="btn1" onclick="window.location='admin_login.php?logout=1';return false;">logout</button>
       </ul>
     </div>
   </div>
@@ -50,12 +53,12 @@ if (isset($_GET['logout'])) {
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-    <img src="img/logo.png" style="background-color:skyblue;width: 150px;height:60px;padding-left: 20px;">
+    <img src="img/logo.png" style="background-color:skyblue;width: 328px;height:110px;padding-left: 20px;">
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Age</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="review.php">Donation under review</a></li>
+        <li><a href="accepted.php">Donation Accepted</a></li>
+        <li><a href="rejected.php">Donation Rejected</a></li>
         <button class="btn" onclick="window.location='add_admin.php'">Add new admin</button>
         <button class="btn" onclick="window.location='script/mail.php'">Send email</button>
         <button class="btn1" onclick="window.location='admin_login.php?logout=1';return false;">logout</button>

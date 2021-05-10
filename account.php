@@ -23,17 +23,15 @@
 					if($row['email'] == $_POST['email'] && $row['perm']==1){
 						if($row['password'] == $_POST['password']){
 							$_SESSION['email']=$_POST['email'];
-							$_SESSION['name']=$row['name'];
-							
-                            header("Location: admin_login.php");
+							$_SESSION['uid']=$row['uid'];
+							header("Location: admin_login.php");
 						}
 					}
 					elseif($row['email'] == $_POST['email'] && $row['perm']==2){
 						if($row['password'] == $_POST['password']){
 							
 							$_SESSION['email']=$_POST['email'];
-							$_SESSION['name']=$row['name'];
-							// header("Location:user_login.php");
+							$_SESSION['uid']=$row['uid'];
 							header("Location:user_login.php");
 						}
 					}
