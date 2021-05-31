@@ -1,94 +1,100 @@
-body{
-	background-color: #F3EBF6;
-	font-family: 'ubuntu',sans-serif;
+body {
+  background-color: #f3ebf6;
+  font-family: "ubuntu", sans-serif;
+}
+.main {
+  background-color: #ffffff;
+  width: 400px;
+  height: 430px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(red, green, blue, alpha);
+}
+.return {
+padding: 4px;
+  background-color: black;
+  color: #fff;
+  padding-top: 4px;
+  width: 50px;
+  border-radius: 1.5em;
+  text-align: center;
+}
+.sign {
+  padding-top: 0px;
+  color: skyblue;
+  font-family: "ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+.username {
+  width: 76%;
+  color: rgba(red, green, blue, alpha);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(red, green, blue, alpha);
+  padding: 10px 20px;
+  border: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(red, green, blue, alpha);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: left;
+  margin-bottom: 27px;
+  font-family: "ubuntu", sans-serif;
+}
+form.form1 {
+  padding-top: 40px;
+}
+.password {
+  width: 76%;
+  color: rgba(red, green, blue, alpha);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(red, green, blue, alpha);
+  padding: 10px 20px;
+  border: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(red, green, blue, alpha);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: left;
+  margin-bottom: 27px;
+  font-family: "ubuntu", sans-serif;
+}
+.login {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #74c2e6, #10b8e2);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: "ubuntu", sans-serif;
+  margin-left: 35%;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(red, green, blue, alpha);
+}
+.signup {
+  text-shadow: 0px 0px 3px rgba(red, green, blue, alpha);
+  color: #f7fdfd;
+  padding-top: 15px;
+  text-align: center;
+}
+a {
+  text-shadow: 0px 0px 3px rgba(red, green, blue, alpha);
+  color: #19b2bd;
+  text-decoration: none;
+}
+.error {
+  text-align: center;
+  color: red;
+}
+@media (max-width: 600px) {
+  .main {
+    border-radius: 0px;
   }
-  .main{
-	background-color: #FFFFFF;
-	width: 400px;
-	height: 400px;
-	margin: 7em auto;
-	border-radius: 1.5em;
-	box-shadow: 0px 11px 35px 2px rgba(red, green, blue, alpha);
-  }
-  .sign{
-	padding-top: 40px;
-	color:skyblue;
-	font-family: 'ubuntu',sans-serif;
-	font-weight: bold;
-	font-size: 23px;
-  }
-  .username{
-	width: 76%;
-	color: rgba(red, green, blue, alpha);
-	font-weight: 700;
-	font-size: 14px;
-	letter-spacing: 1px;
-	background: rgba(red, green, blue, alpha);
-	padding: 10px 20px;
-	border: none;
-	box-sizing: border-box;
-	border: 2px solid rgba(red, green, blue, alpha);
-	margin-bottom: 50px;
-	margin-left: 46px;
-	text-align:left;
-	margin-bottom: 27px;
-	font-family: 'ubuntu',sans-serif;
-  }
-  form.form1{
-	padding-top: 40px;
-  }
-  .password{
-	width: 76%;
-	color: rgba(red, green, blue, alpha);
-	font-weight: 700;
-	font-size: 14px;
-	letter-spacing: 1px;
-	background: rgba(red, green, blue, alpha);
-	padding: 10px 20px;
-	border: none;
-	box-sizing: border-box;
-	border: 2px solid rgba(red, green, blue, alpha);
-	margin-bottom: 50px;
-	margin-left: 46px;
-	text-align:left;
-	margin-bottom: 27px;
-	font-family: 'ubuntu',sans-serif;
-  
-  }
-  .login{
-	cursor: pointer;
-	border-radius: 5em;
-	color: #fff;
-	background: linear-gradient(to right,#74c2e6 ,#10b8e2);
-	border: 0;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	font-family: 'ubuntu',sans-serif;
-	margin-left: 35%;
-	font-size: 13px;
-	box-shadow: 0 0 20px 1px rgba(red, green, blue, alpha);
-  
-  }
-  .signup{
-	text-shadow: 0px 0px 3px rgba(red, green, blue, alpha);
-	color: #f7fdfd;
-	padding-top: 15px;
-	text-align: center;
-  
-  }
-  a{
-	text-shadow: 0px 0px 3px rgba(red, green, blue, alpha);
-	color: #19b2bd;
-	text-decoration: none;
-  }
-  .error{
-	  text-align: center;
-	  color: red;
-	  }
-  @media (max-width: 600px){
-	.main{
-	  border-radius: 0px;
-	}
-  }
+}

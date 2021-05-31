@@ -16,16 +16,12 @@ if (isset($_GET['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SignUp </title>
-
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-
     <link rel="stylesheet" href="style/signup.css">
 </head>
 
 <body>
-
     <div class="main">
-
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -95,10 +91,6 @@ if (isset($_GET['login'])) {
                 </div>
             </div>
         </section>
-
     </div>
-
-
 </body>
-
 </html>

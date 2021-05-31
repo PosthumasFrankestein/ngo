@@ -11,7 +11,6 @@ while($row = mysqli_fetch_array($no)) {
     $result[] = $row['email'];
 }
 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -83,5 +82,5 @@ while($row = mysqli_fetch_array($no)) {
             }
         }
     }
-        ?>
+?>
     

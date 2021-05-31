@@ -7,7 +7,6 @@ html{
     box-sizing: border-box;
 }
 .logo{
-    
     font-size: 40px;
     width: 110px;
     height: 100px;
@@ -137,6 +136,11 @@ html{
 .content2 button:hover{
     cursor: pointer;
     opacity: 0.5;
+}
+.content2  button a{
+    background:none;
+    color:black;
+    cursor: pointer;
 }
 .content2 a{
     color: white;

@@ -60,10 +60,10 @@
                 <form>
                     <div class="login">
                         <h4 style="color: black;padding-bottom: 30px;">Choose amount to donate</h4>
-                        <button href="#">$10 USD</button>
-                        <button href="#">$20 USD</button>
-                        <button href="#">$40 USD</button>
-                        <button href="#">$100 USD</button>
+                        <button href="account.php" onclick="myFunction()">$10 USD</button>
+                        <button href="account.php" onclick="myFunction()">$20 USD</button>
+                        <button href="account.php" onclick="myFunction()">$40 USD</button>
+                        <button href="account.php" onclick="myFunction()">$100 USD</button>
                         <input type="text" placeholder="Other amount">
                         <a href="#get_involved">Donate</a>
                     </div>
@@ -73,7 +73,6 @@
     </div>
     <center>
         <section class="our_work" id="our_work">
-
             <p>
             <h1 class="a1">OUR WORK</h1>
             <h1>258 million people lack basic access to education. We’re on a mission to change
@@ -94,7 +93,6 @@
                     </li>
                     <li>Child education funded</li>
                 </ul>
-
             </div>
             <div class="inner-3">
                 <ul>
@@ -225,6 +223,19 @@
     <p class="paragraph"><span>© 2018 NGO Federation of Nepal.</span></p>
     <br>
     <br>
+    <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("login");
+            // var y = document.getElementById("edit");
+            print(x);
+            // if (x.style.display === "none") {
+            //     x.style.display = "block";
+            //     y.style.display = "none";
+            // } else {
+            //     x.style.display = "none";
+            //     y.style.display = "block";
+            // }
+        }
+    </script>
 </body>
-
 </html>

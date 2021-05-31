@@ -17,8 +17,6 @@ $row = mysqli_fetch_assoc($query_run);
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['uid']);
-    unset($_SESSION['msg']);
     header("location: account.php");
 }
 ?>
@@ -29,7 +27,7 @@ if (isset($_GET['logout'])) {
     <title>NGO</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/4_5_0.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/user.css">
@@ -46,9 +44,9 @@ if (isset($_GET['logout'])) {
                 <div class="head" id="head">
                     <ul>
                         <li><a href="home.php#article">Why E-F-ALL?</a></li>
-                        <li><a href="#our_work">Our work</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#get_involved">Get involved</a></li>
+                        <li><a href="home.php#our_work">Our work</a></li>
+                        <li><a href="home.php#about">About Us</a></li>
+                        <li><a href="home.php#get_involved">Get involved</a></li>
                         <li><a href="#"><i Class="fa fa-phone"></i> Call-Us: +9779809867532</a></li>
                         <li><a href="user_login.php?logout='1'"><i Class="fa fa-shopping-cart"></i>Log-out</a></li>
                     </ul>
@@ -66,6 +64,7 @@ if (isset($_GET['logout'])) {
             </center>
         </div>
     </div>
+    
     <div id="myDIV3" class="selection">
         <table>
             <tr>

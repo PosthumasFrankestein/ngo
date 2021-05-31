@@ -1,6 +1,6 @@
 <?php
 // session_start();
-include 'dbconnection.php';
+// include 'dbconnection.php';
 // // checking session is valid for not 
 // if (strlen($_SESSION['id']==0)) {
 //   header('location:logout.php');
