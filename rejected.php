@@ -4,6 +4,10 @@ if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You have to log in first";
     header('location: account.php');
 }
+if (!isset($_SESSION['perm'])) {
+    session_destroy();
+    header('location: account.php');
+  }
 $link = mysqli_connect("localhost", "root", "", "lonee_list");
 if (isset($_GET['logout'])) {
     session_destroy();

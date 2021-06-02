@@ -43,7 +43,7 @@
         
                     </ul>
                     <ul>
-                        <li><a href="#"><i Class="fa fa-phone"></i> Call-Us: +9779809867532</a></li>
+                        <li><a href="#"><i></i>View Campaigns</a></li>
                         <li><a href="#"><i Class="fa fa-map-marker"></i>Donate</a></li>
                         <li><a href="account.php"><i Class="fa fa-shopping-cart"></i>My-Account</a></li>
                     </ul>
