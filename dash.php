@@ -1,20 +1,10 @@
 <?php
-// session_start();
-// include 'dbconnection.php';
-// // checking session is valid for not 
-// if (strlen($_SESSION['id']==0)) {
-//   header('location:logout.php');
-//   } else{
-
-// // for deleting user
-if(isset($_GET['id']))
-{
-$adminid=$_GET['id'];
-$msg=mysqli_query($con,"delete from users where id='$adminid'");
-if($msg)
-{
-echo "<script>alert('Data deleted');</script>";
-}
+if (isset($_GET['id'])) {
+    $adminid = $_GET['id'];
+    $msg = mysqli_query($con, "delete from users where id='$adminid'");
+    if ($msg) {
+        echo "<script>alert('Data deleted');</script>";
+    }
 }
 ?>
 <!DOCTYPE html>
