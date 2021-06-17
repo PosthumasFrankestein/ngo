@@ -47,8 +47,8 @@ if (isset($_GET['logout'])) {
                         <li><a href="home.php#our_work">Our work</a></li>
                         <li><a href="home.php#about">About Us</a></li>
                         <li><a href="home.php#get_involved">Get involved</a></li>
-                        <li><a href="#"><i Class="fa fa-phone"></i> Call-Us: +9779809867532</a></li>
-                        <li><a href="user_login.php?logout='1'"><i Class="fa fa-shopping-cart"></i>Log-out</a></li>
+                        <li><a href="add_campaign.php">Add Campaigns</a></li>
+                        <li><a href="user_login.php?logout='1'">Log-out</a></li>
                     </ul>
                 </div>
             </div>
