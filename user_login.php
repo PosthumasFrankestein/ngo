@@ -38,7 +38,8 @@ if (isset($_GET['logout'])) {
         <img src="img/background.jpg" style="width: 1430px;">
         <div class="overlay">
             <div class="logo">
-                <img src="img/logo.png" style="width: 150px;height:60px;padding-left: 20px;">
+            <a href="home.php"><img src="img/logo.png" style="width: 150px;height:60px;padding-left: 20px;">
+                </a>
             </div>
             <div class="cx">
                 <div class="head" id="head">

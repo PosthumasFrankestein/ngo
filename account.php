@@ -34,6 +34,7 @@
 						$_SESSION['email'] = $_POST['email'];
 						$_SESSION['uid'] = $row['uid'];
 						$_SESSION['perm'] = $row['perm'];
+						$_SESSION['name'] = $row['name'];
 						header("Location: admin_login.php");
 					}
 				} elseif ($row['email'] == $_POST['email'] && $row['perm'] == 2) {
@@ -41,6 +42,7 @@
 
 						$_SESSION['email'] = $_POST['email'];
 						$_SESSION['uid'] = $row['uid'];
+						$_SESSION['name'] = $row['name'];
 						header("Location:user_login.php");
 					}
 				}

@@ -16,33 +16,44 @@
         <div class="overlay">
             <div class="logo">
                 <a href="home.php"><img src="img/logo.png" style="width: 150px;height:60px;padding-left: 20px;">
-                </a></div>
+                </a>
+            </div>
             <div class="cx">
                 <div class="head" id="head">
-                <ul>
-                    <li><a href="#article">Why E-F-ALL?</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Our Work</a>
-                        <div class="dropdown-content">
-                            <a href="#article">Lebanon</a>
-                            <a href="#article">Africa</a>
-                            <a href="#article">Covid-19</a>
-                        </div>
-                    </li>
-                    <li><a href="#about">About Us</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
-                        <div class="dropdown-content">
-                            <a href="#fund">Fundraise</a>
-                            <a href="#bp">Brand Partnership</a>
-                            <a href="#lg">Legacy giving</a>
-                            <a href="#st">Student and teacher</a>
-                        </div>
-                    </li>
-                    <li><a href="view_campaign.php"><i></i>View campaigns</a></li>
-                    <li><a href="#"><i Class="fa fa-map-marker"></i>Donate</a></li>
-                    <li><a href="account.php"><i Class="fa fa-shopping-cart"></i>My-Account</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#article">Why E-F-ALL?</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Our Work</a>
+                            <div class="dropdown-content">
+                                <a href="#article">Lebanon</a>
+                                <a href="#article">Africa</a>
+                                <a href="#article">Covid-19</a>
+                            </div>
+                        </li>
+                        <li><a href="#about">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Get Involved</a>
+                            <div class="dropdown-content">
+                                <a href="#fund">Fundraise</a>
+                                <a href="#bp">Brand Partnership</a>
+                                <a href="#lg">Legacy giving</a>
+                                <a href="#st">Student and teacher</a>
+                            </div>
+                        </li>
+                        <li><a href="view_campaign.php"><i></i>View campaigns</a></li>
+                        <li><a href="#"><i Class="fa fa-map-marker"></i>Donate</a></li>
+                        <?php
+                        session_start();
+                        if (!isset($_SESSION['name'])) { 
+                            echo '<li><a href="account.php">My-Account</a></li>';
+                        }
+                        else{?>
+                            <li><a href="user_login.php"><?php echo $_SESSION['name']?></a></li>
+                        <?php
+                        }
+                        ?>
+
+                    </ul>
                 </div>
             </div>
             <div class="content1">
