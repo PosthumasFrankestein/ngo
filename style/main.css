@@ -268,6 +268,7 @@ button:hover {
 }
 .article {
   width: 1260px;
+  height:fit-content;
   margin-left: 30px;
   display: inline-block;
 }
