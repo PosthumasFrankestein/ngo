@@ -198,7 +198,6 @@
                 <li><a href="mailto:e.f.all.ngo@gmail.com">Contact us</a></li>
                 <li><a href="#">Help center</a></li>
                 <li><a href="#">Request a speaker</a></li>
-                <li><a href="#">Shop our store</a></li>
             </ul>
         </div>
         <div id="get_involved">

@@ -58,7 +58,7 @@ if (isset($_GET['logout'])) {
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav hidden-xs">
-            <img src="img/logo.png" style="background-color:skyblue;width: 328px;height:110px;padding-left: 20px;">
+            <img src="img/logo.png" style="background-color:skyblue;width: 300px;height:110px;padding-left: 20px;">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="admin_login.php">Dashboard</a></li>
                     <li><a href="review.php">Donation under review</a></li>

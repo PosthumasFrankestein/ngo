@@ -49,7 +49,7 @@ if (isset($_GET['reject'])) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">logo</a>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" style="background-color:skyblue;height:30px;width:100px;"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -68,7 +68,7 @@ if (isset($_GET['reject'])) {
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav hidden-xs">
-            <img src="img/logo.png" style="background-color:skyblue;width: 328px;height:110px;padding-left: 20px;">
+            <img src="img/logo.png" style="background-color:skyblue;width:300px;height:110px;padding-left: 20px;">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="admin_login.php">Dashboard</a></li>
                     <li class="active"><a href="#">Donation under review</a></li>
