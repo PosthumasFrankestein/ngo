@@ -268,15 +268,16 @@ button:hover {
 }
 .article {
   width: 1260px;
+  height:fit-content;
   margin-left: 30px;
-  display: inline-block;
+  display: flex;
+  padding-bottom:10px;
 }
 .All-B2 {
   width: 410px;
   background: linear-gradient(90deg, #cc2b5e, #aa076b);
   float: left;
   margin-left: 20px;
-  height: 70vh;
   margin-right: 20px;
 }
 .All-B3 {
@@ -284,7 +285,6 @@ button:hover {
   background: linear-gradient(90deg, #2193b0 10%, #89cecc 70%);
   float: left;
   margin-left: 10px;
-  height: 70vh;
   margin-right: 10px;
 }
 .All-B4 {
@@ -292,7 +292,6 @@ button:hover {
   background: linear-gradient(100deg, #42e99b 10%, #2fe729 70%);
   float: left;
   margin-left: 10px;
-  height: 70vh;
   margin-right: 10px;
 }
 .B2-img img {
